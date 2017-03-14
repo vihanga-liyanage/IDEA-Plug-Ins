@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : org.wso2.vihanga.example.student : org.wso2.vihanga.example.student.web-1.0.0-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/org.wso2.vihanga.example.student.parent/org.wso2.vihanga.example.student.web/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent" />
+    </properties>
+    <root id="archive" name="org.wso2.vihanga.example.student.web-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Gradle : org.wso2.vihanga.example.student : org.wso2.vihanga.example.student.web-1.0.0-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>

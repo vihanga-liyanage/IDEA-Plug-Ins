@@ -1,0 +1,11 @@
+Student {
+    _001,
+    Name : "Vihanga",
+    Age : 24,
+    Address {
+        "No. 24/A, Station Road, Pinwatte",
+        "Panadura",
+        12500.
+        Sri Lanka
+   }
+};

@@ -1,0 +1,16 @@
+grammar org.wso2.vihanga.example.student.Student with org.eclipse.xtext.common.Terminals
+
+generate student "http://www.wso2.org/vihanga/example/student/Student"
+
+Model:
+	students+=Student*;
+
+Student:
+	'Student' id=ID name=STRING age=INT address=Address';';
+
+Address:
+	'Address' '{'
+	'StreetAddress' streetAddress=STRING','
+	'City' city=STRING','
+	'PostalCode' postalCode=INT
+	'}';

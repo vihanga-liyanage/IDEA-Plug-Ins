@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.xtext:org.eclipse.xtext.junit4:2.9.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.xtext/org.eclipse.xtext.junit4/2.9.2/458c337815ae678afd11c74a97b83c5b4ef2fea0/org.eclipse.xtext.junit4-2.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.xtext/org.eclipse.xtext.junit4/2.9.2/2472c240fdae52294029749313659def4279fb3b/org.eclipse.xtext.junit4-2.9.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

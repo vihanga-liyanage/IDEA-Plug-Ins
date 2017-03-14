@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student.iml" group="org.wso2.vihanga.example.student" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide.iml" group="org.wso2.vihanga.example.student.ide" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide_main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide_main.iml" group="org.wso2.vihanga.example.student.ide" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide_test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.ide/org.wso2.vihanga.example.student.ide_test.iml" group="org.wso2.vihanga.example.student.ide" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea.iml" group="org.wso2.vihanga.example.student.idea" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea_main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea_main.iml" group="org.wso2.vihanga.example.student.idea" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea_test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.idea/org.wso2.vihanga.example.student.idea_test.iml" group="org.wso2.vihanga.example.student.idea" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.parent.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web.iml" group="org.wso2.vihanga.example.student.web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web_main.iml" group="org.wso2.vihanga.example.student.web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student.web/org.wso2.vihanga.example.student.web_test.iml" group="org.wso2.vihanga.example.student.web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student_main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student_main.iml" group="org.wso2.vihanga.example.student" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student_test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.wso2.vihanga.example.student/org.wso2.vihanga.example.student_test.iml" group="org.wso2.vihanga.example.student" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+include 'org.wso2.vihanga.example.student'
+include 'org.wso2.vihanga.example.student.ide'
+include 'org.wso2.vihanga.example.student.idea'
+include 'org.wso2.vihanga.example.student.web'

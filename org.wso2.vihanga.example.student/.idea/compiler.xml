@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="org.wso2.vihanga.example.student.ide_main" target="1.8" />
+      <module name="org.wso2.vihanga.example.student.ide_test" target="1.8" />
+      <module name="org.wso2.vihanga.example.student.idea_main" target="1.8" />
+      <module name="org.wso2.vihanga.example.student.idea_test" target="1.8" />
+      <module name="org.wso2.vihanga.example.student.web_main" target="1.8" />
+      <module name="org.wso2.vihanga.example.student.web_test" target="1.8" />
+      <module name="org.wso2.vihanga.example.student_main" target="1.8" />
+      <module name="org.wso2.vihanga.example.student_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

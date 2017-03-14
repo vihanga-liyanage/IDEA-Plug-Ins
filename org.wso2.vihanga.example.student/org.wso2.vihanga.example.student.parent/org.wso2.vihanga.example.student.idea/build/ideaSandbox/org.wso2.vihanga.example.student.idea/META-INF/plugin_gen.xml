@@ -1,0 +1,93 @@
+<idea-plugin version="2">
+	<extensions defaultExtensionNs="org.eclipse.xtext.idea">
+		<package
+			uri="http://www.wso2.org/vihanga/example/student/Student"
+			class="org.wso2.vihanga.example.student.student.StudentPackage"
+		/>
+		<resourceFactory 
+			type="stdnt"
+			class="org.eclipse.xtext.resource.IResourceFactory"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+		/>
+		<resourceServiceProvider
+			uriExtension="stdnt"
+			class="org.eclipse.xtext.idea.resource.IResourceIdeaServiceProvider"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+		/>
+
+		<lang.setup
+			language="org.wso2.vihanga.example.student.Student"
+			implementationClass="org.wso2.vihanga.example.student.idea.StudentIdeaSetup"
+		/>
+	</extensions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<psi.treeChangePreprocessor implementation="org.wso2.vihanga.example.student.idea.lang.psi.StudentCodeBlockModificationListener"/>
+
+		<fileTypeFactory implementation="org.wso2.vihanga.example.student.idea.lang.StudentFileTypeFactory"/>
+		<stubElementTypeHolder class="org.wso2.vihanga.example.student.idea.lang.StudentElementTypeProvider"/>
+		<lang.ast.factory 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.lang.BaseXtextASTFactory"
+		/>
+		<lang.parserDefinition 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="org.wso2.vihanga.example.student.idea.lang.parser.StudentParserDefinition"
+		/>
+		<lang.findUsagesProvider 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.findusages.BaseXtextFindUsageProvider"
+		/>
+		<lang.refactoringSupport 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.refactoring.BaseXtextRefactoringSupportProvider"
+		/>
+		<lang.namesValidator 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="com.intellij.lang.refactoring.NamesValidator"
+		/>
+		<lang.syntaxHighlighterFactory key="org.wso2.vihanga.example.student.Student" implementationClass="org.wso2.vihanga.example.student.idea.highlighting.StudentSyntaxHighlighterFactory" />
+		<lang.braceMatcher 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="com.intellij.lang.PairedBraceMatcher"
+		/>
+		<annotator 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.annotation.IssueAnnotator"
+		/>
+		<completion.contributor language="org.wso2.vihanga.example.student.Student" implementationClass="org.wso2.vihanga.example.student.idea.completion.StudentCompletionContributor"/>
+		<pom.declarationSearcher implementation="org.wso2.vihanga.example.student.idea.lang.pom.StudentPomDeclarationSearcher"/>
+
+		<lang.psiStructureViewFactory 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="com.intellij.lang.PsiStructureViewFactory"
+		/>
+		<facetType implementation="org.wso2.vihanga.example.student.idea.facet.StudentFacetType"/>
+      	<lang.documentationProvider 
+      		language="org.wso2.vihanga.example.student.Student"
+      		factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+      		implementationClass="org.eclipse.xtext.idea.documentation.IdeaDocumentationProvider"
+      	/>
+		<colorSettingsPage implementation="org.wso2.vihanga.example.student.idea.highlighting.StudentColorSettingsPage"/>
+		<highlightVisitor implementation="org.wso2.vihanga.example.student.idea.highlighting.StudentSemanticHighlightVisitor"/>
+
+		<lang.formatter 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="com.intellij.formatting.FormattingModelBuilder"
+		/>
+		<lang.commenter 
+			language="org.wso2.vihanga.example.student.Student"
+			factoryClass="org.wso2.vihanga.example.student.idea.StudentExtensionFactory"
+			implementationClass="com.intellij.lang.CodeDocumentationAwareCommenter"
+		/>
+	</extensions>
+</idea-plugin>

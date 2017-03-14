@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.emf:org.eclipse.emf.codegen:2.11.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.emf/org.eclipse.emf.codegen/2.11.0/fc79590ac6de1f24c79f7b133d304831776c998b/org.eclipse.emf.codegen-2.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.emf/org.eclipse.emf.codegen/2.11.0/b9f534339675a5205857f17153f5b01f690ac567/org.eclipse.emf.codegen-2.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

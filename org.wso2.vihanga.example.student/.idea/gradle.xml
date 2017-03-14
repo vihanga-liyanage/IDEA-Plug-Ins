@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent" />
+            <option value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent/org.wso2.vihanga.example.student" />
+            <option value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent/org.wso2.vihanga.example.student.ide" />
+            <option value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent/org.wso2.vihanga.example.student.idea" />
+            <option value="$PROJECT_DIR$/org.wso2.vihanga.example.student.parent/org.wso2.vihanga.example.student.web" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
