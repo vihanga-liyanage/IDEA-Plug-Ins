@@ -89,6 +89,8 @@ fragment NOTALPHANUMERIC
    : ~ [a-zA-Z0-9]
    ;
 
+LINE_COMMENT : '//' .*? ('\n'|EOF)	-> channel(HIDDEN) ;
+COMMENT      : '/*' .*? '*/'    	-> channel(HIDDEN) ;
 
 WS
    : [ \r\n\t] -> skip

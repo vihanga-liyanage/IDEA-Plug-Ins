@@ -26,6 +26,8 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <fileTypeFactory implementation="com.wso2.gsoc.vihanga.datetimelan.DatetimeFileTypeFactory"/>
+    <lang.parserDefinition language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeParserDefinition"/>
+    <lang.ast.factory language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeASTFactory"/>
   </extensions>
 
   <actions>

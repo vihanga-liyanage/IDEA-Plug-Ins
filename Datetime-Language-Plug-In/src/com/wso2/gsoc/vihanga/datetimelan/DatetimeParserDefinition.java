@@ -16,6 +16,7 @@ import com.wso2.gsoc.vihanga.datetimelan.grammar.DatetimeLexer;
 import com.wso2.gsoc.vihanga.datetimelan.grammar.DatetimeParser;
 import com.wso2.gsoc.vihanga.datetimelan.psi.DatetimeFile;
 import org.antlr.jetbrains.adaptor.lexer.ANTLRLexerAdaptor;
+import org.antlr.jetbrains.adaptor.lexer.PSIElementTypeFactory;
 import org.antlr.jetbrains.adaptor.parser.ANTLRParserAdaptor;
 import org.antlr.jetbrains.adaptor.psi.ANTLRPsiNode;
 import org.antlr.v4.runtime.Parser;
@@ -27,7 +28,10 @@ import org.jetbrains.annotations.*;
  */
 public class DatetimeParserDefinition implements ParserDefinition {
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
-//    public static final TokenSet COMMENTS = TokenSet.create(DatetimeTypes.COMMENT);
+    public static final TokenSet COMMENTS = PSIElementTypeFactory.createTokenSet(
+            DatetimeLanguage.INSTANCE,
+            DatetimeLexer.COMMENT,
+            DatetimeLexer.LINE_COMMENT);
 
     public static final IFileElementType FILE = new IFileElementType(DatetimeLanguage.INSTANCE);
 
@@ -45,7 +49,7 @@ public class DatetimeParserDefinition implements ParserDefinition {
 
     @NotNull
     public TokenSet getCommentTokens() {
-        return null;
+        return COMMENTS;
     }
 
     @NotNull

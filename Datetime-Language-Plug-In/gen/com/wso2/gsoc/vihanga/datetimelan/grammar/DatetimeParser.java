@@ -21,7 +21,7 @@ public class DatetimeParser extends Parser {
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
 		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
-		T__31=32, T__32=33, ALPHA=34, DIGIT=35, WS=36;
+		T__31=32, T__32=33, ALPHA=34, DIGIT=35, LINE_COMMENT=36, COMMENT=37, WS=38;
 	public static final int
 		RULE_date_time = 0, RULE_day = 1, RULE_date = 2, RULE_month = 3, RULE_time = 4, 
 		RULE_hour = 5, RULE_zone = 6, RULE_two_digit = 7, RULE_four_digit = 8, 
@@ -41,7 +41,7 @@ public class DatetimeParser extends Parser {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, "ALPHA", "DIGIT", 
-		"WS"
+		"LINE_COMMENT", "COMMENT", "WS"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -736,7 +736,7 @@ public class DatetimeParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3&N\4\2\t\2\4\3\t\3"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3(N\4\2\t\2\4\3\t\3"+
 		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\3\2"+
 		"\3\2\3\2\5\2\32\n\2\3\2\3\2\3\2\3\3\3\3\3\4\6\4\"\n\4\r\4\16\4#\3\4\3"+
 		"\4\3\4\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\5\7\63\n\7\3\b\3\b\3\b"+
