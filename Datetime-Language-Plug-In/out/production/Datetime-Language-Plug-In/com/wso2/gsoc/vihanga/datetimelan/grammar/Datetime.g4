@@ -1,7 +1,7 @@
 grammar Datetime;
 
 date_time
-   : (day ',')? date time
+   : ((day ',')? date time)* EOF
    ;
 
 day
@@ -69,21 +69,17 @@ alphanumeric
    | DIGIT
    ;
 
-
 fragment CHAR
    : [\u0000-\u007F]
    ;
-
 
 ALPHA
    : [a-zA-Z]
    ;
 
-
 DIGIT
    : [0-9]
    ;
-
 
 fragment NOTALPHANUMERIC
    : ~ [a-zA-Z0-9]
@@ -92,6 +88,29 @@ fragment NOTALPHANUMERIC
 LINE_COMMENT : '//' .*? ('\n'|EOF)	-> channel(HIDDEN) ;
 COMMENT      : '/*' .*? '*/'    	-> channel(HIDDEN) ;
 
-WS
-   : [ \r\n\t] -> skip
-;
+WS : [ \t\n\r]+ -> channel(HIDDEN) ;
+
+MON : 'Mon';
+TUE : 'Tue';
+WED : 'Wed';
+THU : 'Thu';
+FRI : 'Fri';
+SAT : 'Sat';
+SUN : 'Sun';
+
+JAN : 'Jan';
+FEB : 'Feb';
+MAR : 'Mar';
+APR : 'Apr';
+MAY : 'May';
+JUN : 'Jun';
+JUL : 'Jul';
+AUG : 'Aug';
+SEP : 'Sep';
+OCT : 'Oct';
+NOV : 'Nov';
+DEC : 'Dec';
+
+ERRCHAR
+	:	.	-> channel(HIDDEN)
+	;

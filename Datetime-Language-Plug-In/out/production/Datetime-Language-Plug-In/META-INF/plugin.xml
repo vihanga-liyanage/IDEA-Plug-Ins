@@ -28,6 +28,11 @@
     <fileTypeFactory implementation="com.wso2.gsoc.vihanga.datetimelan.DatetimeFileTypeFactory"/>
     <lang.parserDefinition language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeParserDefinition"/>
     <lang.ast.factory language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeASTFactory"/>
+    <lang.syntaxHighlighterFactory key="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeSyntaxHighlighterFactory"/>
+    <colorSettingsPage implementation="com.wso2.gsoc.vihanga.datetimelan.DatetimeColorSettingsPage"/>
+
+    <lang.psiStructureViewFactory language="Datetime"
+                                  implementationClass="com.wso2.gsoc.vihanga.datetimelan.structview.DatetimeStructureViewFactory"/>
   </extensions>
 
   <actions>
