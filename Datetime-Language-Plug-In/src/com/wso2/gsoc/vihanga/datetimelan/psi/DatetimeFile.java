@@ -22,7 +22,7 @@ public class DatetimeFile extends PsiFileBase {
 
   @Override
   public String toString() {
-    return "Simple File";
+    return "Datetime File";
   }
 
   @Override

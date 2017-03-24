@@ -25,14 +25,24 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
+    <!-- file type -->
     <fileTypeFactory implementation="com.wso2.gsoc.vihanga.datetimelan.DatetimeFileTypeFactory"/>
+
+    <!--parser-->
     <lang.parserDefinition language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeParserDefinition"/>
-    <lang.ast.factory language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeASTFactory"/>
-    <lang.syntaxHighlighterFactory key="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeSyntaxHighlighterFactory"/>
+
+    <!-- highlighting -->
+    <lang.syntaxHighlighterFactory language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeSyntaxHighlighterFactory"/>
     <colorSettingsPage implementation="com.wso2.gsoc.vihanga.datetimelan.DatetimeColorSettingsPage"/>
 
+    <!--structure view-->
+    <lang.ast.factory language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.DatetimeASTFactory"/>
     <lang.psiStructureViewFactory language="Datetime"
                                   implementationClass="com.wso2.gsoc.vihanga.datetimelan.structview.DatetimeStructureViewFactory"/>
+
+    <!--completion-->
+    <completion.contributor language="Datetime" implementationClass="com.wso2.gsoc.vihanga.datetimelan.completion.DatetimeCompletionContributor"/>
+
   </extensions>
 
   <actions>

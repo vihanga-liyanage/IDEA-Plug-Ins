@@ -13,9 +13,10 @@ import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
 import com.wso2.gsoc.vihanga.datetimelan.grammar.DatetimeLexer;
 import com.wso2.gsoc.vihanga.datetimelan.grammar.DatetimeParser;
-import com.wso2.gsoc.vihanga.datetimelan.psi.DatetimeFile;
+import com.wso2.gsoc.vihanga.datetimelan.psi.*;
 import org.antlr.jetbrains.adaptor.lexer.ANTLRLexerAdaptor;
 import org.antlr.jetbrains.adaptor.lexer.PSIElementTypeFactory;
+import org.antlr.jetbrains.adaptor.lexer.RuleIElementType;
 import org.antlr.jetbrains.adaptor.lexer.TokenIElementType;
 import org.antlr.jetbrains.adaptor.parser.ANTLRParserAdaptor;
 import org.antlr.jetbrains.adaptor.psi.ANTLRPsiNode;
@@ -105,6 +106,28 @@ public class DatetimeParserDefinition implements ParserDefinition {
 
     @NotNull
     public PsiElement createElement(ASTNode node) {
-        return new ANTLRPsiNode(node);
+        IElementType elementType = node.getElementType();
+        if (elementType instanceof TokenIElementType) {
+            return new ANTLRPsiNode(node);
+        }
+        if (!(elementType instanceof RuleIElementType)) {
+            return new ANTLRPsiNode(node);
+        }
+
+        RuleIElementType ruleElType = (RuleIElementType) elementType;
+//        System.out.println(ruleElType.getRuleIndex());
+        switch (ruleElType.getRuleIndex()) {
+            case DatetimeParser.RULE_day:
+//                System.out.println("Day");
+                return new DayNode(node);
+            case DatetimeParser.RULE_date:
+                return new DateNode(node);
+            case DatetimeParser.RULE_month:
+                return new MonthNode(node);
+            case DatetimeParser.RULE_time:
+                return new TimeNode(node);
+            default:
+                return new ANTLRPsiNode(node);
+        }
     }
 }
