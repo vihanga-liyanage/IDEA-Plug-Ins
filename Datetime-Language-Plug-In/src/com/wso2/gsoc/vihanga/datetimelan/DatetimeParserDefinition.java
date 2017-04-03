@@ -106,6 +106,7 @@ public class DatetimeParserDefinition implements ParserDefinition {
 
     @NotNull
     public PsiElement createElement(ASTNode node) {
+        System.out.println("Text: " + node.getText());
         IElementType elementType = node.getElementType();
         if (elementType instanceof TokenIElementType) {
             return new ANTLRPsiNode(node);
@@ -115,10 +116,20 @@ public class DatetimeParserDefinition implements ParserDefinition {
         }
 
         RuleIElementType ruleElType = (RuleIElementType) elementType;
-//        System.out.println(ruleElType.getRuleIndex());
+//        switch (ruleElType.getRuleIndex()) {
+//            case DatetimeParser.RULE_day:
+//                System.out.println("RULE_day");
+//            case DatetimeParser.RULE_date:
+//                System.out.println("RULE_date");
+//            case DatetimeParser.RULE_month:
+//                System.out.println("RULE_month");
+//            case DatetimeParser.RULE_time:
+//                System.out.println("RULE_time");
+//            default:
+//                System.out.println("default");
+//        }
         switch (ruleElType.getRuleIndex()) {
             case DatetimeParser.RULE_day:
-//                System.out.println("Day");
                 return new DayNode(node);
             case DatetimeParser.RULE_date:
                 return new DateNode(node);

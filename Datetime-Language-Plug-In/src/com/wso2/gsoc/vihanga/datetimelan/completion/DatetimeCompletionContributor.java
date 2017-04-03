@@ -7,6 +7,7 @@ import com.intellij.openapi.project.DumbAware;
 import com.intellij.patterns.PlatformPatterns;
 import com.intellij.psi.*;
 import com.intellij.util.ProcessingContext;
+import com.wso2.gsoc.vihanga.datetimelan.psi.DateNode;
 import com.wso2.gsoc.vihanga.datetimelan.psi.DayNode;
 import org.jetbrains.annotations.NotNull;
 
@@ -101,28 +102,33 @@ public class DatetimeCompletionContributor extends CompletionContributor impleme
         PsiElement parent = element.getParent();
         PsiElement parentPrevSibling = parent.getPrevSibling();
         PsiElement prevSibling = element.getPrevSibling();
-        System.out.println("resultSet: " + resultSet);
-        System.out.println("element: " + element.toString());
-        System.out.println("parent: " + parent);
-        System.out.println("parentPrevSibling: " + parentPrevSibling);
-        System.out.println("prevSibling: " + prevSibling);
+        System.out.println("parents: " + parent + " - " + parent.getParent() + " - " + parent.getParent().getParent() + " - " + parent.getParent().getParent().getParent());
         System.out.println("==============");
         if (parent instanceof DayNode) {
             System.out.printf("Day");
-
         }
-        addDays(resultSet, CONTEXT_KEYWORD_PRIORITY);
-        addMonths(resultSet, CONTEXT_KEYWORD_PRIORITY);
+        if (parent.getParent().getParent() instanceof DateNode) {
+            addDays(resultSet, CONTEXT_KEYWORD_PRIORITY);
+        } else {
+            return;
+        }
     }
 
     private void addDays(CompletionResultSet resultSet, int priority) {
-        resultSet.addElement(PrioritizedLookupElement.withPriority(MON, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(TUE, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(WED, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(THU, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(FRI, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(SAT, priority));
-        resultSet.addElement(PrioritizedLookupElement.withPriority(SUN, priority));
+        resultSet.addElement(MON);
+        resultSet.addElement(TUE);
+        resultSet.addElement(WED);
+        resultSet.addElement(THU);
+        resultSet.addElement(FRI);
+        resultSet.addElement(SAT);
+        resultSet.addElement(SUN);
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(MON, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(TUE, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(WED, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(THU, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(FRI, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(SAT, priority));
+//        resultSet.addElement(PrioritizedLookupElement.withPriority(SUN, priority));
     }
 
     private void addMonths(CompletionResultSet resultSet, int priority) {
