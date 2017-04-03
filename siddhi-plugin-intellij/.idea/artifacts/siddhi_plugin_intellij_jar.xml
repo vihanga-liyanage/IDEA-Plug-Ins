@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="siddhi-plugin-intellij:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/siddhi_plugin_intellij_jar</output-path>
+    <root id="archive" name="siddhi-plugin-intellij.jar">
+      <element id="module-output" name="siddhi-plugin-intellij" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Antlr/antlr-4.6-complete.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
