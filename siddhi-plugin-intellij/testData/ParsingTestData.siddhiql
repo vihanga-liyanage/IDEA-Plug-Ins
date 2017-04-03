@@ -1,0 +1,17 @@
+-- This is a single line comment
+define stream StockStream (symbol string, price float, volume long);
+define stream CheckStockStream (symbol string, volume long);
+@from(eventtable = 'rdbms' ,datasource.name = 'cepDB' , table.name = 'stockInfo' , bloom.filters = 'enable')
+define table StockTable (symbol string, price float, volume long);
+
+/*
+    This is a block comment
+*/
+
+@info(name = 'query1')
+from StockStream
+insert into StockTable ;
+
+@info(name = 'query2')
+from CheckStockStream[(StockTable.symbol==symbol) in StockTable]
+insert into OutStream;
