@@ -1,0 +1,1 @@
+SiddhiQLStructureViewElement -> public TreeElement[] getChildren() -> review xpaths

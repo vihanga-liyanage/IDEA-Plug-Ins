@@ -35,10 +35,20 @@
     <lang.parserDefinition language="SiddhiQL"
                            implementationClass="org.wso2.siddhiql.plugins.idea.SiddhiQLParserDefinition"/>
 
+    <!-- commenter -->
+    <lang.commenter language="SiddhiQL" implementationClass="org.wso2.siddhiql.plugins.idea.SiddhiQLCommenter"/>
+
     <!-- highlighting -->
     <lang.syntaxHighlighterFactory language="SiddhiQL"
                                    implementationClass="org.wso2.siddhiql.plugins.idea.highlighter.SiddhiQLSyntaxHighlighterFactory"/>
     <colorSettingsPage implementation="org.wso2.siddhiql.plugins.idea.highlighter.SiddhiQLColorSettingsPage"/>
+
+    <!--structure view-->
+    <lang.psiStructureViewFactory language="SiddhiQL"
+                                  implementationClass="org.wso2.siddhiql.plugins.idea.structureview.SiddhiQLStructureViewFactory"/>
+
+    <lang.ast.factory language="SiddhiQL"
+                      implementationClass="org.wso2.siddhiql.plugins.idea.SiddhiQLASTFactory"/>
 
 
   </extensions>
