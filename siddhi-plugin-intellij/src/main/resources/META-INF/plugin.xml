@@ -43,6 +43,13 @@
                                    implementationClass="org.wso2.siddhiql.plugins.idea.highlighter.SiddhiQLSyntaxHighlighterFactory"/>
     <colorSettingsPage implementation="org.wso2.siddhiql.plugins.idea.highlighter.SiddhiQLColorSettingsPage"/>
 
+    <!--structure view-->
+    <lang.psiStructureViewFactory language="SiddhiQL"
+                                  implementationClass="org.wso2.siddhiql.plugins.idea.structureview.SiddhiQLStructureViewFactory"/>
+
+    <lang.ast.factory language="SiddhiQL"
+                      implementationClass="org.wso2.siddhiql.plugins.idea.SiddhiQLASTFactory"/>
+
 
   </extensions>
 
