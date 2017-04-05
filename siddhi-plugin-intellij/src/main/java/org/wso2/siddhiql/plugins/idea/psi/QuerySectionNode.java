@@ -14,24 +14,18 @@
  *  limitations under the License.
  */
 
-package org.wso2.siddhiql.plugins.idea.structureview;
+package org.wso2.siddhiql.plugins.idea.psi;
 
-import com.intellij.navigation.ItemPresentation;
-import com.intellij.psi.PsiFile;
+import com.intellij.lang.ASTNode;
+import org.antlr.jetbrains.adaptor.psi.ANTLRPsiNode;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Created by Vihanga Liyanage on 4/3/2017.
+ * Created by Vihanga Liyanage on 4/5/2017.
  */
-public class SiddhiQLStructureViewRootElement extends SiddhiQLStructureViewElement {
+public class QuerySectionNode extends ANTLRPsiNode {
 
-    public SiddhiQLStructureViewRootElement(PsiFile element) {
-        super(element);
-    }
-
-    @NotNull
-    @Override
-    public ItemPresentation getPresentation() {
-        return new SiddhiQLRootPresentation((PsiFile) element);
+    public QuerySectionNode(@NotNull ASTNode node) {
+        super(node);
     }
 }
