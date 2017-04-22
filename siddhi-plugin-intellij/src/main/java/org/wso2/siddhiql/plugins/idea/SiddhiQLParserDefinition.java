@@ -137,7 +137,7 @@ public class SiddhiQLParserDefinition implements ParserDefinition {
 
     @NotNull
     public PsiElement createElement(ASTNode node) {
-        System.out.println("Text: " + node.getText());
+//        System.out.println("Text: " + node.getText());
         IElementType elementType = node.getElementType();
         if (elementType instanceof TokenIElementType) {
             return new ANTLRPsiNode(node);

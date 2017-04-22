@@ -15,3 +15,5 @@ insert into StockTable ;
 @info(name = 'query2')
 from CheckStockStream[(StockTable.symbol==symbol) in StockTable]
 insert into OutStream;
+
+define s
